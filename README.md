@@ -6,7 +6,7 @@ ___requests documentation___ - https://requests.readthedocs.io/en/latest/
 
 ___django documentation___ - https://docs.djangoproject.com/en/4.1/
 
-
+## Installation
 ```commandline
     pip install request
     pip install django
