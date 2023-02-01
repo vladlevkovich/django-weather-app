@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>What's the weather like?</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+        h1 {
+          font-size: 40px;
+          margin-bottom: 40px;
+        }
+
+        form {
+          width: 50%; /* adjust as needed */
+          margin: 50px auto; /* adjust top and bottom margins as needed */
+        }
+        button[type="submit"] {
+          font-size: 20px;
+          display: block;
+          margin: 50px auto;
+          margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+          padding: 10px;
+          font-size: 20px;
+          width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter city" name="city">
+        <button type="submit">Enter</button>
+    </form>
+    <h1>City: {{city}}</h1>
+    <h1>Description: {{description}}</h1>
+    <h1>Temperature: {{temp}}С</h1>
+    <h1>Min. Temperature: {{temp_min}}С</h1>
+    <h1>Max. Temperature: {{temp_max}}С</h1>
+    <h1>Sunrise: {{time_sunrise}}</h1>
+    <h1>Sunset: {{time_sunset}}</h1>
+    <img scr="http://openweathermap.org/img/w/{{ icon }}.png">
+
+</body>
+</html>
