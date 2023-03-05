@@ -1,8 +1,7 @@
+from .key import api_key
 import requests
 import datetime
 import math
-
-api_key = 'a406a95a2b3940a4481fdb01740c8053'
 
 
 def get_weather(city):
